@@ -1,6 +1,11 @@
 #ifndef __MEMORY_H__
 #define __MEMORY_H__
 
+/* system includes */
+#include <time.h>
+
+/* internal includes */
+
 #define PROC_MEMINFO "/proc/meminfo"
 
 #define MEM_TOTAL    "MemTotal"
@@ -20,6 +25,8 @@ typedef struct sys_mem_free_info_t
   int MemFree;
   int Buffers;
   int Cached;
+  struct tm tm;
+  int mem_free_percent;
 } sys_mem_free_info_t;
 
 int get_mem_info (char *info);
