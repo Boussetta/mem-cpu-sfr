@@ -26,9 +26,9 @@ typedef struct sys_mem_free_info_t
   int Buffers;
   int Cached;
   struct tm tm;
-  int mem_free_percent;
+  int free_memory;
 } sys_mem_free_info_t;
 
 int get_mem_info (char *info);
 
-#endif /* __MEMORY_H__s */
+#endif /* __MEMORY_H__ */
